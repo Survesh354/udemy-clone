@@ -10,8 +10,12 @@ body{
    padding: 10px;
    display: flex;
    justify-content: space-between;
-    border-bottom: solid black 2px;
-    gap: 10px;
+   border-bottom: solid gray 2px;
+   gap: 10px;
+   position: sticky;
+   top: 0;
+   background-color: white;
+   z-index: 1;
 }
 .navbar__s1__title{
     color: #a435f0;
@@ -22,23 +26,50 @@ body{
     border: solid black 1px;
     border-radius: 30px;
     width: 60%;
+    background-color: white;
 }
 .navbar__s2 input{
     border: none;
     outline: none;
     width: 90%;
     font-size: 16px;
+    background-color: transparent;
 }
 .navbar__s3{
     display: flex;
     gap: 10px;
     align-items: center;
 }   
+/* my learning-popup */
+
+.mylearning1 {
+    position: relative;
+    cursor: pointer;
+}
+
+.mylearning2 {
+    position: absolute;
+    top: 30px;
+    right: 0; /* More consistent than 100px */
+    background-color: white;
+    border: 1px solid black;
+    width: 120px;
+    font-size: 13px;
+    padding: 10px;
+    display: none;
+    z-index: 10;  /* Prevents overlapping issues */
+}
+
+.mylearning1:hover .mylearning2 {
+    display: block;
+}
+
+
 .categories{
     display: flex;
     gap: 20px;
     padding: 10px;
-    border-bottom: solid black 1px;
+    border-bottom: solid gray 1px;
     justify-content: space-around;
    
 }
@@ -48,10 +79,21 @@ body{
     border-radius: 30px;
     padding: 10px 15px;
 }
+.section-image{
+    position: relative;
+}
 .section-image img{
     width: 100%;
     height: auto;
     margin-top: none;
+}
+.section-image__text{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    background-color: white;
+     padding: 20px;
+     border: solid black 3px;
 }
 .recommended{
     padding: 20px;
